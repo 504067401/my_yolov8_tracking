@@ -64,7 +64,7 @@ def create_tracker(tracker_type, tracker_config, reid_weights, device, half):
             lambda_=cfg.botsort.lambda_
         )
         return botsort
-    elif tracker_type == 'deeptrack':
+    elif tracker_type == 'deepocsort':
         from trackers.deepocsort.ocsort import OCSort
         botsort = OCSort(
             reid_weights,
